@@ -5,6 +5,7 @@ import {SimpleStorage} from "./SimpleStorage.sol";
 
 contract StorageFactory{
 
+//array for storing SimpleStorage contracts
     SimpleStorage[] public simpleStorages;
 
     function createSimpleStorageContract() public {
