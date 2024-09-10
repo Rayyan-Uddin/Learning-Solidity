@@ -6,6 +6,7 @@ import {PriceConverter} from "./PriceConverter.sol";
 import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";       
 
 
+//error will automatically show the error call
 error notOwner();
 
 contract FundMe{
