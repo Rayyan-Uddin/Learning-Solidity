@@ -8,8 +8,9 @@ import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interf
 library PriceConverter{
 
     function getPrice() internal view returns(uint256) {
-        //address (zk Sync Era): 0xfEefF7c3fB57d18C5C6Cdd71e45D2D0b4F9377bF  
-
+        //address (zk Sync Era): 0xfEefF7c3fB57d18C5C6Cdd71e45D2D0b4F9377bF 
+ 
+//aggregator interface returns value of eth in real time
         AggregatorV3Interface priceFeed = AggregatorV3Interface(0xfEefF7c3fB57d18C5C6Cdd71e45D2D0b4F9377bF);
         (,int256 answer,,,) = priceFeed.latestRoundData();
         return uint256(answer * 1e10);
